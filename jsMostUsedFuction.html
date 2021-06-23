@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Most Used Fuction In JS</title>
+  </head>
+  <body>
+    <h1>Most Used Fuction In JS</h1>
+    <h2>1- map()</h2>
+    <h2>2- filter()</h2>
+    <h2>2- reduce()</h2>
+
+    <script>
+      <!--! //map function example -->
+
+      const weeklyReadings = [20, 22, 20.5, 19, 21, 21.5, 23];
+      const maps = weeklyReadings.map((elem) => {
+        //  console.log(elem + 6);
+      });
+
+      <!--! //filter function example -->
+
+      const filterss = weeklyReadings.filter((elem) => {
+        // console.log(elem < 20);
+      });
+
+      const colderDays = weeklyReadings.filter((dayTemperature) => {
+        return dayTemperature < 20;
+      });
+
+      if (colderDays) {
+        console.log("Yes, there were colder days last week");
+      } else {
+        console.log("No, there were no colder days");
+      }
+
+      <!--! //reduce function example -->
+      const numbers = [1, 2, 3, 4, 5, 6];
+      const factorial = numbers.reduce((acc, item) => acc * item, 1);
+      console.log(factorial); // 120
+    </script>
+  </body>
+</html>
